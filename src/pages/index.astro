@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Work history - operations case studies
+const workHistory = [
+  {
+    company: 'The Retail Performance Company (RPC)',
+    role: 'Director of Operations',
+    years: '2022 - 2025',
+    logo: '/images/rpc-logo.jpg',
+    problem: 'Training operations for 350+ BMW dealerships were fragmented across spreadsheets with no visibility, inconsistent processes, and mounting overhead.',
+    solution: 'Built centralized training coordination system in Airtable with Zapier automations. Created standardized processes replicated org-wide. Introduced operational technology platforms driving adoption across all locations.',
+    metrics: ['350+ Locations', '50% Overhead Cut', '20%+ Margin Increase']
+  },
+  {
+    company: 'IATSE Film & TV Union',
+    role: 'Director of Business Operations',
+    years: '2017 - 2020',
+    logo: '/images/iatse-logo.png',
+    problem: 'Six field reps managing 10-30 simultaneous productions with 1,100-2,500 members had no centralized tracking. Contract enforcement was inconsistent, compliance documentation scattered.',
+    solution: 'Designed field operations tracking system serving multiple stakeholders: training tool for junior staff, compliance documentation for EEOC/OSHA/federal labor board, audit trail for contract enforcement, and data source for negotiations.',
+    metrics: ['$4-5M Budget', '8-12 Staff', 'First Contract Wins in 15+ Years']
+  },
+  {
+    company: 'LC Co & Quarter Horses',
+    role: 'Operations Manager',
+    years: '2021 - 2022',
+    logo: '/images/lc-logo.png',
+    problem: 'Legacy breeding facility operations trapped owner in day-to-day scheduling, tracking, and logistics instead of strategic work.',
+    solution: 'Re-engineered and digitized facility operations. Modernized scheduling, tracking, and logistics systems.',
+    metrics: ['50%+ Owner Bandwidth Freed', 'Digitized Operations']
+  },
+  {
+    company: 'The Soapbox Lounge',
+    role: 'Operations Manager',
+    years: '2012 - 2014',
+    logo: '/images/soapbox-logo.png',
+    problem: 'High-profile event operations lacked standardized workflows. Scheduling accuracy and team communication were inconsistent.',
+    solution: 'Managed full operational lifecycle for 100+ events. Implemented workflow systems creating standardized processes adopted across all event operations.',
+    metrics: ['100+ Events', '40% Efficiency Gain']
+  }
+];
+
+// Hero metrics
+const metrics = [
+  { value: '350+', label: 'Sites Managed' },
+  { value: '$4-5M', label: 'Budgets' },
+  { value: '50%', label: 'Overhead Cut' },
+  { value: '10+', label: 'Years' }
+];
+
+// Tools/capabilities
+const capabilities = [
+  'Multi-Unit Operations',
+  'Training & Development',
+  'Budget & P&L Management',
+  'Compliance & QA',
+  'Process Automation',
+  'Change Management'
+];
+---
+
+<BaseLayout title="Kelly Boudreaux | Operations Leader">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen w-full bg-bg-primary overflow-hidden">
+    <div class="container-main pt-8 pb-16 lg:pt-12 lg:pb-24">
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between mb-16 lg:mb-24">
+        <span class="text-xl font-bold text-accent-yellow uppercase tracking-wide">Kelly Boudreaux</span>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#work" class="text-text-secondary hover:text-accent-yellow">Work</a>
+          <a href="#about" class="text-text-secondary hover:text-accent-yellow">Story</a>
+          <a href="#contact" class="text-accent-yellow hover:text-accent-yellow-hover">Connect</a>
+          <a href="https://linkedin.com/in/kellyb312" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-accent-yellow" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <!-- Giant headline -->
+      <div class="mb-16 lg:mb-24">
+        <h1 class="headline-giant">Scale.</h1>
+      </div>
+
+      <!-- Main content grid -->
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <!-- Text content -->
+        <div class="space-y-6 max-w-lg">
+          <h2 class="text-3xl lg:text-4xl font-bold text-text-primary leading-tight">
+            Operations. Systems. Results.
+          </h2>
+          <p class="text-lg text-text-secondary leading-relaxed">
+            I build scalable operational systems that create organizational leverage.
+          </p>
+          <a href="#work" class="btn-primary">
+            See My Work
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="relative">
+            <img
+              src="/images/kelly-headshot.jpg"
+              alt="Kelly Boudreaux"
+              class="w-64 lg:w-80 h-auto rounded-lg object-cover shadow-xl"
+            />
+            <!-- Years badge -->
+            <div class="absolute -bottom-6 -left-6 card rounded-lg shadow-lg p-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-accent-yellow flex items-center justify-center">
+                  <span class="text-black font-bold text-sm">10+</span>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-text-primary">Years in Operations</p>
+                  <p class="text-xs text-text-secondary">Operator & Leader</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics strip -->
+      <div class="mt-24 -mx-6 sm:-mx-8 px-6 sm:px-8 py-12" style="background-color: #76ffcb;">
+        <div class="flex flex-wrap justify-center gap-x-16 gap-y-8">
+          {metrics.map((metric) => (
+            <div class="text-center">
+              <span class="block text-4xl lg:text-5xl font-bold text-black">{metric.value}</span>
+              <span class="text-sm text-black/70 uppercase tracking-wide mt-1 block">{metric.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="flex justify-center mt-16">
+        <a href="#work" class="flex flex-col items-center gap-2 text-text-secondary hover:text-accent-yellow">
+          <span class="text-sm">Scroll to explore</span>
+          <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work" class="w-full bg-bg-surface section">
+    <div class="container-main">
+      <!-- Giant headline -->
+      <div class="mb-24 lg:mb-32">
+        <h2 class="headline-giant">Work.</h2>
+      </div>
+
+      <!-- Work history - matching Bree's portfolio layout -->
+      <div class="container-narrow space-y-16 lg:space-y-20">
+        {workHistory.map((job) => (
+          <div class="flex gap-6 lg:gap-8">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <img src={job.logo} alt={`${job.company} logo`} class="w-16 h-16 lg:w-20 lg:h-20 rounded-lg object-cover" />
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 space-y-4 pt-1">
+              <!-- Company / Role / Years -->
+              <div class="flex flex-wrap items-center gap-2 text-lg">
+                <span class="font-bold text-text-primary">{job.company}</span>
+                <span class="text-text-secondary">·</span>
+                <span class="text-text-secondary">{job.role}</span>
+                <span class="text-text-secondary">·</span>
+                <span class="text-text-secondary">{job.years}</span>
+              </div>
+
+              <!-- Problem -->
+              <p class="text-lg text-text-primary leading-relaxed">{job.problem}</p>
+
+              <!-- Solution -->
+              <p class="text-lg text-text-primary leading-relaxed">{job.solution}</p>
+
+              <!-- Metrics -->
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                {job.metrics.map((metric) => (
+                  <span class="metric-highlight">{metric}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="w-full bg-bg-primary section">
+    <div class="container-main">
+      <!-- Giant headline -->
+      <div class="mb-16 lg:mb-24">
+        <h2 class="headline-giant">Story.</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <!-- Image column -->
+        <div class="lg:col-span-5">
+          <div class="sticky top-24">
+            <img src="/images/kelly-headshot.jpg" alt="Kelly Boudreaux" class="w-full max-w-md rounded-lg shadow-xl" />
+            <!-- Capabilities strip below image -->
+            <div class="mt-6 flex flex-wrap gap-2">
+              {capabilities.map((cap) => (
+                <span class="text-xs px-3 py-1.5 rounded-full bg-bg-surface border border-border-default text-text-secondary">{cap}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Content column -->
+        <div class="lg:col-span-7">
+          <!-- Bio highlights -->
+          <p class="text-lg font-semibold text-text-primary mb-8">
+            350+ Sites · $4-5M Budgets · Film/TV & Automotive Industries
+          </p>
+
+          <!-- Narrative -->
+          <div class="space-y-6 text-lg text-text-secondary leading-relaxed">
+            <p>I build scalable operational systems that create organizational leverage.</p>
+
+            <p>
+              At a film union, I designed a tracking system for six reps managing thousands of crew members
+              that served compliance, training, and contract enforcement. It delivered the first improvements
+              to contract language in over 15 years.
+            </p>
+
+            <p>
+              At BMW's training agency, I overhauled coordination for 350 dealerships, cutting overhead by half
+              with Airtable and Zapier automations that were replicated org-wide.
+            </p>
+
+            <p>
+              I manage operations at scale with limited resources. I've handled $4-5M operating budgets and
+              led 8-12 staff across shared services, training, compliance, field operations, and administration.
+              I build systems that enable small teams to deliver enterprise-level impact.
+            </p>
+
+            <p>
+              What drives me: working with leadership that's actually committed to operational transformation,
+              not change theater. I thrive in environments ready to level up, whether building new systems,
+              optimizing what exists, or rebuilding after setbacks.
+            </p>
+
+            <p>
+              I don't just use tools. I evaluate, select, and drive org-wide adoption. Introduced Stripe,
+              Airtable, Asana, Slack, and Zapier across organizations. Now expanding into AI-powered
+              workflow automation with Claude, Perplexity, and ChatGPT.
+            </p>
+          </div>
+
+          <!-- Quote -->
+          <div class="mt-12 py-8 px-8 card-elevated rounded-lg">
+            <p class="text-2xl lg:text-3xl font-medium text-text-primary leading-snug italic">
+              "Give me a problem, and I'll wake up thinking about how to solve it."
+            </p>
+          </div>
+
+          <!-- What I'm Looking For -->
+          <div class="mt-16 pt-12 border-t border-border-default">
+            <h3 class="text-2xl font-bold text-text-primary mb-8">What I'm Looking For</h3>
+            <div class="space-y-4 text-lg text-text-secondary leading-relaxed">
+              <p>
+                <span class="text-accent-yellow font-medium">Role:</span> Chief of Staff, Director, or Head of Operations managing 2-10 people
+              </p>
+              <p>
+                <span class="text-accent-yellow font-medium">Company:</span> Profitable with $4-5M+ ARR and experienced leadership genuinely committed to operational excellence
+              </p>
+              <p>
+                <span class="text-accent-yellow font-medium">Location:</span> Remote/hybrid preferred, or on-site in Colorado or Texas
+              </p>
+              <p>
+                <span class="text-accent-yellow font-medium">Industries:</span> Open to any, with particular fit for film/TV studios/vendors/venues, SaaS, or performance horse industry
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <footer id="contact" class="w-full bg-bg-surface section">
+    <div class="container-main">
+      <!-- Giant headline -->
+      <div class="mb-16 lg:mb-24">
+        <h2 class="headline-giant">Connect.</h2>
+      </div>
+
+      <div class="max-w-2xl">
+        <div class="text-xl text-text-secondary mb-12 space-y-1">
+          <p>Building operational infrastructure?</p>
+          <p>Scaling a team?</p>
+          <p>Let's talk.</p>
+        </div>
+
+        <!-- Primary CTA -->
+        <a href="mailto:kellyboudreaux312@gmail.com" class="btn-primary text-lg mb-12 inline-flex">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          kellyboudreaux312@gmail.com
+        </a>
+
+        <!-- Social links and resume -->
+        <div class="flex items-center gap-4 mb-8">
+          <a
+            href="https://linkedin.com/in/kellyb312"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center w-12 h-12 rounded-lg card text-text-secondary hover:border-accent-yellow hover:text-accent-yellow transition-colors"
+            aria-label="LinkedIn"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a
+            href="/resume.pdf"
+            download
+            class="flex items-center justify-center gap-2 h-12 px-4 rounded-lg card text-text-secondary hover:border-accent-yellow hover:text-accent-yellow transition-colors text-sm font-medium"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            Resume
+          </a>
+        </div>
+
+        <!-- Location -->
+        <div class="flex items-center gap-2 text-text-secondary">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>Denver, CO</span>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="mt-24 pt-8 border-t border-border-default text-sm text-text-secondary">
+        <span>&copy; {new Date().getFullYear()} Kelly Boudreaux</span>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>
